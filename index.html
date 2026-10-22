@@ -19,7 +19,7 @@
    STORE SETTINGS — change these, then upload again.
    ============================================================ */
 const STORE = {
-  version: "2.1.0",
+  version: "2.2.0",
   name: "SR Shoes",
   city: "Nashik",
   whatsapp: "918275407603",          // orders arrive here
@@ -234,7 +234,7 @@ select.ctl{border:none; background:var(--soft); border-radius:999px; padding:13p
 .note{border-left:4px solid var(--accent); background:#FFF3EE; padding:14px 16px; font-size:14px; margin:0 0 22px}
 .done{text-align:center; padding:56px 0}
 .done .tick{width:76px; height:76px; border-radius:50%; background:var(--accent); display:grid; place-items:center; margin:0 auto 14px}
-.done .tick svg{width:40px; height:40px; color:var(--black)}
+.done .tick svg{width:40px; height:40px; color:#fff}
 .done p{color:var(--muted)}
 
 /* info */
@@ -680,54 +680,36 @@ function viewBag(){
       <div><span>Delivery in ${STORE.city}</span>${free?'<span class="free">Free</span>':'<span>Porter fare, confirmed on WhatsApp</span>'}</div>
       <div class="grand"><span>Total</span><span>${rs(sub)}${free?'':' + delivery'}</span></div></div>
     ${!free?`<div class="note" style="margin-top:16px">Add ${rs(STORE.freeDeliveryAbove-sub)} more for free delivery.</div>`:''}
-    <a class="btn primary block" href="#/checkout" style="margin-top:22px">Checkout ${ICON.arrow}</a>
+    <button class="btn wa block" id="sendOrder" style="margin-top:22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2Z"/></svg>Order on WhatsApp</button>
+    <p style="text-align:center;color:var(--muted);font-size:13px;margin:10px 0 0">No sign-up, no forms. We confirm on WhatsApp, then you pay by UPI.</p>
     <a class="btn block" href="#/shop" style="margin-top:10px">Continue shopping</a></div></div>`;
+  $('#sendOrder').onclick=sendOrder;
   const ls=bagLines();
   $$('[data-inc]').forEach(b=>b.onclick=()=>{ const l=ls[+b.dataset.inc], e=bag.find(x=>x.id===l.id&&x.l===l.l); if(e.q>=maxQty(l.s)){ toast('That is all we have in this size'); return; } e.q++; saveBag(); viewBag(); });
   $$('[data-dec]').forEach(b=>b.onclick=()=>{ const l=ls[+b.dataset.dec], e=bag.find(x=>x.id===l.id&&x.l===l.l); e.q--; if(e.q<1) bag=bag.filter(x=>x!==e); saveBag(); viewBag(); });
   $$('[data-rm]').forEach(b=>b.onclick=()=>{ const l=ls[+b.dataset.rm]; bag=bag.filter(x=>!(x.id===l.id&&x.l===l.l)); saveBag(); viewBag(); });
 }
 
-function viewCheckout(){
-  const {lines,sub,free}=totals();
-  if(!lines.length){ location.hash='#/bag'; return; }
-  const c=store('srs_customer')||{};
-  app.innerHTML=`<div class="wrap"><div class="page"><h1>Checkout</h1>
-    <div class="note">You send this order to us on WhatsApp. We confirm your pairs are ready and share a UPI payment request. Then we deliver.</div>
-    <form id="co" novalidate>
-      <div class="field"><label for="cn">Your name</label><input id="cn" autocomplete="name" value="${esc(c.name||'')}" required><div class="err" id="e_cn"></div></div>
-      <div class="field"><label for="cp">Mobile number</label><input id="cp" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10-digit mobile" value="${esc(c.phone||'')}"><div class="err" id="e_cp"></div></div>
-      <div class="field"><label for="ca">Delivery address</label><textarea id="ca" rows="3" autocomplete="street-address" placeholder="House / flat, building, street, area">${esc(c.addr||'')}</textarea><div class="err" id="e_ca"></div></div>
-      <div class="field"><label for="cl">Landmark (optional)</label><input id="cl" value="${esc(c.land||'')}"></div>
-      <div class="field"><label for="cz">Pincode</label><input id="cz" inputmode="numeric" maxlength="6" autocomplete="postal-code" value="${esc(c.pin||'')}"><div class="err" id="e_cz"></div></div>
-      <div class="totals">${lines.map(l=>`<div><span>${esc(fullName(l.it))} · size ${esc(l.l)}${l.q>1?' × '+l.q:''}</span><span>${rs(l.price*l.q)}</span></div>`).join('')}
-        <div><span>Delivery</span>${free?'<span class="free">Free</span>':'<span>Porter fare</span>'}</div>
-        <div class="grand"><span>Total</span><span>${rs(sub)}${free?'':' + delivery'}</span></div></div>
-      <button class="btn wa block" type="submit" style="margin-top:22px">Send order on WhatsApp</button>
-    </form></div></div>`;
-  $('#co').onsubmit=e=>{
-    e.preventDefault();
-    const v={ name:$('#cn').value.trim(), phone:$('#cp').value.replace(/\D/g,'').slice(-10), addr:$('#ca').value.trim(), land:$('#cl').value.trim(), pin:$('#cz').value.trim() };
-    const err={ cn:v.name?'':'Please enter your name', cp:/^[6-9]\d{9}$/.test(v.phone)?'':'Enter a valid 10-digit mobile number',
-      ca:v.addr.length>=10?'':'Please enter your full address', cz:!/^\d{6}$/.test(v.pin)?'Enter your 6-digit pincode':STORE.pincodePattern.test(v.pin)?'':`Sorry, we deliver only within ${STORE.city} city for now.` };
-    Object.entries(err).forEach(([k,m])=>$('#e_'+k).textContent=m);
-    const bad=Object.keys(err).find(k=>err[k]); if(bad){ $('#'+bad).focus(); return; }
-    save('srs_customer',v);
-    const ref='SR'+new Date().toISOString().slice(2,10).replace(/-/g,'')+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
-    const msg=[`*New order ${ref}* — ${STORE.name} online`, '',
-      ...lines.map((l,i)=>`${i+1}. ${fullName(l.it)} — size ${l.l}${l.q>1?' × '+l.q:''} — ${rs(l.price*l.q)} (ref ${l.it.id})`), '',
-      `Subtotal: ${rs(sub)}`, `Delivery: ${free?'Free':'Porter fare (please confirm)'}`, `*Total: ${rs(sub)}${free?'':' + delivery'}*`, '',
-      `Name: ${v.name}`, `Mobile: ${v.phone}`, `Address: ${v.addr}${v.land?', near '+v.land:''}, ${STORE.city} ${v.pin}`, '',
-      'Please confirm availability and share the UPI payment details.'].join('\n');
-    save('srs_last_order',{ref, t:Date.now(), msg});
-    window.open(waLink(msg),'_blank','noopener');
-    bag=[]; saveBag();
-    app.innerHTML=`<div class="wrap"><div class="page done"><div class="tick">${ICON.check}</div><h1>Order sent</h1>
-      <p>Your order <b style="color:var(--ink)">${esc(ref)}</b> is in our WhatsApp. If WhatsApp didn't open, <a href="${waLink(msg)}" target="_blank" rel="noopener">tap here to send it</a>.</p>
-      <p>We'll confirm your pairs and send the UPI payment request shortly. Delivery across ${STORE.city} by Porter.</p>
-      <a class="btn primary" href="#/" style="margin-top:12px">Back to shop</a></div></div>`;
-    window.scrollTo(0,0);
-  };
+// No forms: the order goes straight to our WhatsApp. WhatsApp shows us the customer's number;
+// the salesman confirms stock and asks for the address in the chat.
+function sendOrder(){
+  const {lines,sub,free}=totals(); if(!lines.length) return;
+  const ref='SR'+new Date().toISOString().slice(2,10).replace(/-/g,'')+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
+  const msg=[`Hi ${STORE.name}! I'd like to order (${ref}):`, '',
+    ...lines.map((l,i)=>`${i+1}. ${fullName(l.it)} — size ${l.l}${l.q>1?' × '+l.q:''} — ${rs(l.price*l.q)} (ref ${l.it.id})`), '',
+    `*Total: ${rs(sub)}*${free?' · free delivery':' + delivery'}`, '',
+    'Please confirm availability.'].join('\n');
+  save('srs_last_order',{ref, t:Date.now(), msg});
+  window.open(waLink(msg),'_blank','noopener');
+  bag=[]; saveBag();
+  app.innerHTML=`<div class="wrap"><div class="page done"><div class="tick">${ICON.check}</div><h1>Almost done!</h1>
+    <p>Your order <b style="color:var(--ink)">${esc(ref)}</b> is ready in WhatsApp — just tap <b style="color:var(--ink)">Send</b>.<br>If WhatsApp didn't open, <a href="${waLink(msg)}" target="_blank" rel="noopener">tap here</a>.</p>
+    <ol style="text-align:left;max-width:420px;margin:22px auto;color:var(--muted);line-height:1.7">
+      <li>We check your pairs are ready and reply on WhatsApp.</li>
+      <li>Share your delivery address in the chat.</li>
+      <li>Pay by UPI — we deliver across ${STORE.city} by Porter.</li></ol>
+    <a class="btn primary" href="#/" style="margin-top:6px">Back to shop</a></div></div>`;
+  window.scrollTo(0,0);
 }
 
 const INFO={
@@ -751,7 +733,7 @@ const INFO={
         ${directionsUrl?`<a class="btn primary" href="${esc(directionsUrl)}" target="_blank" rel="noopener">${ICON.pin} Get directions</a>`:''}
         ${SHOP.mapsUrl?`<p style="margin-top:14px"><a class="link" href="${esc(SHOP.mapsUrl)}" target="_blank" rel="noopener">Open in Google Maps</a></p>`:''}
       </div>${mapEmbed?`<iframe class="map" loading="lazy" title="Map to ${STORE.name}" referrerpolicy="no-referrer-when-downgrade" src="${mapEmbed}"></iframe>`:''}</div>`:`<p>${STORE.name}, ${STORE.city}.</p>`}`,
-  privacy:()=>`<h1>Privacy</h1><p>We use your name, mobile number and address only to confirm and deliver your order. We don't share them with anyone except the delivery partner who brings your order. Your bag and details are saved only on your own phone to make the next order quicker.</p>`
+  privacy:()=>`<h1>Privacy</h1><p>We use your name, mobile number and address only to confirm and deliver your order. We don't share them with anyone except the delivery partner who brings your order. Your bag is saved only on your own phone.</p>`
 };
 function viewInfo(k){ app.innerHTML=`<div class="wrap"><div class="page info">${(INFO[k]||INFO.contact)()}</div></div>`; window.scrollTo(0,0); }
 
@@ -762,10 +744,10 @@ function route(){
   if(a==='p') viewProduct(decodeURIComponent(b||''));
   else if(a==='shop'){ viewShop(); }
   else if(a==='bag') viewBag();
-  else if(a==='checkout') viewCheckout();
+  else if(a==='checkout'){ location.replace('#/bag'); return; }
   else if(a==='info') viewInfo(b);
   else viewHome();
-  document.body.classList.toggle('nofab',['p','bag','checkout'].includes(a));
+  document.body.classList.toggle('nofab',['p','bag'].includes(a));
   document.body.classList.toggle('has-buybar',a==='p');
   if(a!=='p') window.scrollTo(0,0);
 }
