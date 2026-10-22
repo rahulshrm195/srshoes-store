@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>SR Shoes Nashik — Shop shoes online, free delivery in Nashik</title>
 <meta name="description" content="Shop footwear for men, women and kids from SR Shoes, Nashik. Pick your size, see only what fits, order on WhatsApp. Free delivery across Nashik. Easy size exchange." />
-<meta name="theme-color" content="#0A0A0A" />
+<meta name="theme-color" content="#FF3F6C" />
 <meta property="og:title" content="SR Shoes Nashik — Find your fit" />
 <meta property="og:description" content="Real photos of our stock. See only shoes in your size. Free delivery across Nashik." />
 <meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='900' font-style='italic' fill='%23FF5A1F' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FF3F6C'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='900' fill='white' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script>
 /* ============================================================
    STORE SETTINGS — change these, then upload again.
    ============================================================ */
 const STORE = {
-  version: "2.0.0",
+  version: "2.1.0",
   name: "SR Shoes",
   city: "Nashik",
   whatsapp: "918275407603",          // orders arrive here
@@ -307,6 +307,56 @@ body.has-buybar .toast.show{transform:translateX(-50%) translateY(-70px)}
   .fab svg{width:28px; height:28px}
 }
 body.nofab .fab{display:none}
+
+/* ---- Bright marketplace look ---- */
+:root{--black:#282C3F; --ink:#282C3F; --accent:#FF3F6C; --accent-deep:#E62E5C; --soft:#F5F5F6; --soft2:#EAEAEC; --muted:#7E818C;
+  --display:'Poppins',sans-serif;}
+.strip{background:#282C3F; color:#fff; font-family:var(--body); font-size:12px; font-weight:600; text-transform:none; letter-spacing:0}
+header{background:#fff; color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.logo{color:var(--ink); font-style:normal; font-weight:800; font-size:24px; letter-spacing:-.02em}
+.logo b{color:var(--accent)}
+.iconbtn,.nav button{color:var(--ink); font-family:var(--body); font-size:13px; font-weight:700}
+.nav button.on{box-shadow:inset 0 -3px 0 var(--accent)}
+.iconbtn .count{color:#fff}
+.hero{background:linear-gradient(120deg,#FF3F6C,#FF905A); padding:30px 0 110px}
+.hero h1{font-style:normal; font-weight:800; text-transform:none; font-size:clamp(40px,8vw,76px); line-height:1; letter-spacing:-.03em}
+.hero h1 em{color:#FFE14D; font-style:normal}
+.hero p{color:#fff}
+.hero .ghost{display:none}
+.panel{border-radius:16px; border:none}
+.step-h,.sec-h h2,.shop-top h1,.page h1,.pd h1,.visitband h2,.type span,.who button span,.trust b,.btn,.tag,.footer h4,.state b{font-style:normal !important; text-transform:none !important; letter-spacing:-.01em !important}
+.step-h{font-size:18px}
+.step-h i{border-radius:50%; color:#fff}
+.who button,.type{border-radius:14px}
+.who button span{font-size:20px; font-weight:700}
+.sz{border-radius:10px; font-size:18px; font-family:var(--body)}
+.sz.on{background:var(--accent); border-color:var(--accent)}
+.btn{border-radius:8px; font-size:15px; font-weight:700; font-family:var(--body)}
+.btn.primary{background:var(--accent); border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent-deep); color:#fff; border-color:var(--accent-deep)}
+.trust{background:#FFF0F3; color:var(--ink)}
+.trust .cell{border-color:#FFD6E0 !important}
+.trust b{font-size:16px; font-weight:700}
+.trust small{color:var(--muted)}
+.sec-h h2{font-size:clamp(24px,4vw,34px); font-weight:700}
+.type span{font-size:18px; font-weight:700}
+.type.acc span{font-size:20px}
+.shop-top{background:#fff; color:var(--ink); border-bottom:1px solid var(--soft2)}
+.shop-top h1{font-size:clamp(28px,5vw,44px); font-weight:800}
+.mine{color:var(--muted)} .mine b{color:var(--ink)}
+.chip.on{background:var(--accent); border-color:var(--accent)}
+.ph{border-radius:10px}
+.tag{left:8px; top:8px; border-radius:4px; font-family:var(--body); font-size:11px; font-weight:700; background:#fff; color:var(--accent); box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.brand{color:var(--ink); font-weight:800; letter-spacing:0; text-transform:none; font-size:14px}
+.nm{color:var(--muted); font-weight:500; font-size:13px}
+.fits b::before{color:var(--accent)}
+footer{background:#F5F5F6; color:var(--muted)}
+footer .flogo{color:var(--ink); font-style:normal; font-size:30px} footer h4{color:var(--ink)} footer a{color:var(--muted)}
+.visitband h2,.page h1{font-size:clamp(30px,5vw,46px); font-weight:800}
+.pd h1{font-size:clamp(24px,3.4vw,34px); font-weight:700}
+.buybar .bp{font-family:var(--body); font-size:20px}
+.shop-top h1 em,.hero h1 em{font-style:normal}
+@media (max-width:860px){ .toolbar{flex-wrap:nowrap} .search{flex:1; flex-basis:auto; min-width:0} select.ctl{flex:none; width:128px; padding:13px 10px} }
 </style>
 </head>
 <body>
