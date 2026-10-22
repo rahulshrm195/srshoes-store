@@ -5,18 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>SR Shoes Nashik — Shop shoes online, free delivery in Nashik</title>
 <meta name="description" content="Shop footwear for men, women and kids from SR Shoes, Nashik. Pick your size, see only what fits, order on WhatsApp. Free delivery across Nashik. Easy size exchange." />
-<meta name="theme-color" content="#0E7C6B" />
-<meta property="og:title" content="SR Shoes Nashik — Shop online" />
+<meta name="theme-color" content="#0A0A0A" />
+<meta property="og:title" content="SR Shoes Nashik — Find your fit" />
 <meta property="og:description" content="Real photos of our stock. See only shoes in your size. Free delivery across Nashik." />
 <meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C6B'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='800' fill='white' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='900' font-style='italic' fill='%23FF5A1F' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script>
 /* ============================================================
    STORE SETTINGS — change these, then upload again.
    ============================================================ */
 const STORE = {
-  version: "1.0.0",
+  version: "2.0.0",
   name: "SR Shoes",
   city: "Nashik",
   whatsapp: "918275407603",          // orders arrive here
@@ -38,200 +41,305 @@ const STORE = {
 
 <style>
 :root{
-  --bg:#FAF9F6; --surface:#FFFFFF; --ink:#1A1714; --muted:#6B6560; --faint:#9A938B;
-  --line:#ECE7DF; --line-strong:#DAD3C8; --accent:#0E7C6B; --accent-deep:#0B5E52; --accent-soft:#E4F1EE;
-  --sale:#C2410C; --sale-soft:#FDEBDD; --urgent:#B23A48; --urgent-soft:#F8E6E8; --ok:#2F7D57;
-  --shadow:0 1px 2px rgba(26,23,20,.05),0 8px 24px rgba(26,23,20,.07); --radius:16px;
+  --black:#0A0A0A; --ink:#111111; --white:#FFFFFF; --bg:#FFFFFF; --soft:#F3F3F3; --soft2:#E9E9E9;
+  --muted:#6F6F6F; --faint:#A3A3A3; --line:#E5E5E5;
+  --accent:#FF5A1F; --accent-deep:#E2470F; --ok:#118A4E; --wa:#1FA855;
+  --display:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; line-height:1.45}
+body{background:var(--bg); color:var(--ink); font-family:var(--body); -webkit-font-smoothing:antialiased; line-height:1.45; overflow-x:hidden}
 button{font-family:inherit; cursor:pointer; color:inherit}
 input,textarea,select{font-family:inherit; font-size:16px}
-a{color:var(--accent)}
+a{color:inherit}
 img{max-width:100%; display:block}
 .hidden{display:none !important}
-.wrap{max-width:1180px; margin:0 auto; padding:0 16px}
+.wrap{max-width:1240px; margin:0 auto; padding:0 16px}
+svg.i{width:20px; height:20px; flex:none}
 
 /* top */
-.strip{background:var(--accent-deep); color:#fff; font-size:12.5px; text-align:center; padding:7px 12px; font-weight:600; letter-spacing:.01em}
-.strip span{opacity:.6; margin:0 8px}
-header{position:sticky; top:0; z-index:40; background:rgba(250,249,246,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
-.bar{display:flex; align-items:center; gap:10px; height:62px}
-.logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:800; font-size:19px; letter-spacing:-.02em}
-.logo i{width:34px; height:34px; border-radius:10px; background:var(--accent); color:#fff; display:grid; place-items:center; font-style:normal; font-size:13px}
-.logo small{display:block; font-size:11px; font-weight:600; color:var(--muted); letter-spacing:0}
+.strip{background:var(--accent); color:var(--black); font-family:var(--display); font-weight:700; font-size:15px; text-transform:uppercase; letter-spacing:.06em; text-align:center; padding:6px 12px}
+.strip span{margin:0 10px; opacity:.55}
+header{position:sticky; top:0; z-index:40; background:var(--black); color:var(--white)}
+.bar{display:flex; align-items:center; gap:6px; height:62px}
+.logo{font-family:var(--display); font-weight:900; font-style:italic; font-size:30px; letter-spacing:-.01em; text-decoration:none; color:var(--white); line-height:1; margin-right:18px}
+.logo b{color:var(--accent)}
+.nav{display:flex; gap:2px}
+.nav button{background:none; border:none; color:#D6D6D6; font-family:var(--display); font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.04em; padding:8px 12px}
+.nav button:hover,.nav button.on{color:var(--white)}
+.nav button.on{box-shadow:inset 0 -3px 0 var(--accent)}
 .spacer{flex:1}
-.iconbtn{position:relative; border:1px solid var(--line-strong); background:var(--surface); height:42px; min-width:42px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:0 12px; font-weight:700; font-size:14px; text-decoration:none; color:var(--ink)}
-.iconbtn .count{position:absolute; top:-6px; right:-6px; background:var(--accent); color:#fff; font-size:11px; min-width:20px; height:20px; border-radius:10px; display:grid; place-items:center; padding:0 5px}
-.btn{border:1px solid var(--line-strong); background:var(--surface); border-radius:12px; padding:12px 18px; font-size:15px; font-weight:700; display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; color:var(--ink)}
-.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
-.btn.primary:hover{background:var(--accent-deep)}
-.btn.wa{background:#1FA855; border-color:#1FA855; color:#fff}
-.btn.block{width:100%}
-.btn:disabled{opacity:.5; cursor:not-allowed}
-.link{background:none; border:none; color:var(--accent); font-weight:700; padding:0; font-size:14px}
+.iconbtn{position:relative; background:none; border:none; color:var(--white); height:44px; min-width:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:0 10px; text-decoration:none; font-family:var(--display); font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.04em}
+.iconbtn .count{position:absolute; top:3px; right:0; background:var(--accent); color:var(--black); font-family:var(--body); font-size:11px; font-weight:800; min-width:19px; height:19px; border-radius:10px; display:grid; place-items:center; padding:0 5px}
 
-/* hero / picker */
-.hero{padding:28px 0 8px}
-.hero h1{font-size:clamp(28px,6vw,44px); line-height:1.08; letter-spacing:-.03em; margin:0 0 10px}
-.hero p{color:var(--muted); font-size:16px; margin:0 0 20px; max-width:560px}
-.panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:20px}
-.step-h{font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 10px}
-.who{display:grid; grid-template-columns:repeat(5,1fr); gap:8px}
-.who button{border:1.5px solid var(--line-strong); background:var(--surface); border-radius:14px; padding:14px 6px; font-weight:800; font-size:15px}
-.who button span{display:block; font-size:22px; margin-bottom:2px}
-.who button.on{border-color:var(--accent); background:var(--accent-soft); color:var(--accent-deep)}
+/* buttons */
+.btn{border:2px solid var(--black); background:var(--white); color:var(--black); border-radius:999px; padding:14px 26px; font-family:var(--display); font-size:19px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; display:inline-flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--black); color:var(--white)}
+.btn.primary{background:var(--black); color:var(--white)}
+.btn.primary:hover{background:var(--accent); border-color:var(--accent); color:var(--black)}
+.btn.wa{background:var(--wa); border-color:var(--wa); color:#fff}
+.btn.block{width:100%}
+.btn:disabled{opacity:.35; cursor:not-allowed}
+.btn:disabled:hover{background:var(--black); color:var(--white); border-color:var(--black)}
+.link{background:none; border:none; color:var(--ink); font-weight:700; padding:0; font-size:14px; text-decoration:underline; text-underline-offset:3px}
+
+/* hero */
+.hero{background:var(--black); color:var(--white); padding:44px 0 120px; position:relative; overflow:hidden}
+.hero h1{font-family:var(--display); font-weight:900; font-style:italic; text-transform:uppercase; font-size:clamp(68px,13vw,168px); line-height:.84; letter-spacing:-.01em; margin:0}
+.hero h1 em{color:var(--accent); font-style:italic}
+.hero p{color:#BDBDBD; font-size:17px; max-width:520px; margin:18px 0 0}
+.hero .ghost{position:absolute; right:-40px; bottom:-60px; font-family:var(--display); font-weight:900; font-style:italic; font-size:clamp(160px,28vw,380px); color:#161616; line-height:1; pointer-events:none; user-select:none}
+.hero .wrap{position:relative}
+.pick-wrap{margin-top:-84px; position:relative; z-index:2}
+.panel{background:var(--white); border:1px solid var(--line); box-shadow:0 20px 50px rgba(0,0,0,.12); padding:24px}
+.step-h{font-family:var(--display); font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:.03em; margin:0 0 14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.step-h i{font-style:normal; background:var(--accent); color:var(--black); width:28px; height:28px; display:grid; place-items:center; font-size:17px}
+.step-h small{font-family:var(--body); font-size:13px; font-weight:500; text-transform:none; letter-spacing:0; color:var(--muted)}
+.who{display:grid; grid-template-columns:repeat(5,1fr); gap:10px}
+.who button{position:relative; border:none; padding:0; background:var(--soft); aspect-ratio:4/5; overflow:hidden; text-align:left}
+.who button img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .3s}
+.who button:hover img{transform:scale(1.05)}
+.who button::after{content:""; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,0) 55%)}
+.who button span{position:absolute; left:12px; bottom:10px; z-index:1; color:#fff; font-family:var(--display); font-weight:800; font-style:italic; font-size:28px; text-transform:uppercase; line-height:1}
+.who button.on{outline:4px solid var(--accent); outline-offset:-4px}
+.who button.on span::after{content:" ✓"; color:var(--accent)}
 .sizes{display:flex; flex-wrap:wrap; gap:8px}
-.sz{border:1.5px solid var(--line-strong); background:var(--surface); border-radius:12px; min-width:54px; padding:10px 12px; font-weight:800; font-size:16px; text-align:center}
-.sz small{display:block; font-size:10px; font-weight:600; color:var(--faint)}
-.sz.on{border-color:var(--accent); background:var(--accent); color:#fff}
-.sz.on small{color:#dff}
-.sz-group{margin:4px 0 12px}
-.sz-group h5{margin:0 0 6px; font-size:12px; color:var(--muted); font-weight:700}
-.hint{background:var(--accent-soft); border-radius:12px; padding:10px 12px; font-size:14px; margin:6px 0 12px; display:flex; flex-wrap:wrap; gap:8px; align-items:center}
-.hint button{border:1px solid var(--accent); background:var(--surface); color:var(--accent-deep); border-radius:10px; padding:6px 10px; font-weight:700; font-size:13px}
-.trust{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:20px 0}
-.trust div{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px; font-size:13px; color:var(--muted)}
-.trust b{display:block; color:var(--ink); font-size:14px; margin-bottom:2px}
-.types{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px}
-.type{border:1px solid var(--line); background:var(--surface); border-radius:14px; padding:14px; text-align:left; font-weight:800; font-size:15px}
-.type small{display:block; color:var(--muted); font-weight:600; font-size:12px}
-h2.sec{font-size:22px; letter-spacing:-.02em; margin:28px 0 12px}
+.sz{border:1.5px solid var(--soft2); background:var(--white); min-width:62px; height:54px; padding:0 10px; font-family:var(--display); font-weight:800; font-size:22px; text-align:center; line-height:1; display:inline-flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; transition:border-color .12s}
+.sz:hover{border-color:var(--black)}
+.sz small{display:block; font-family:var(--body); font-size:10px; font-weight:600; color:var(--faint)}
+.sz.on{border-color:var(--black); background:var(--black); color:#fff}
+.sz.on small{color:#bbb}
+.sz-group{margin:4px 0 14px}
+.sz-group h5{margin:0 0 8px; font-size:12px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.08em}
+.hint{border-left:4px solid var(--accent); background:#FFF3EE; padding:12px 14px; font-size:14px; margin:6px 0 16px; display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.hint button{border:1.5px solid var(--black); background:var(--white); padding:7px 12px; font-weight:700; font-size:13px; border-radius:999px}
+.hint button:hover{background:var(--black); color:#fff}
+
+/* bands */
+.trust{background:var(--black); color:#fff; margin-top:56px}
+.trust .wrap{display:grid; grid-template-columns:repeat(4,1fr)}
+.trust .cell{padding:26px 18px; display:flex; gap:14px; align-items:flex-start; border-left:1px solid #222}
+.trust .cell:first-child{border-left:none}
+.trust svg{color:var(--accent); width:30px; height:30px}
+.trust b{display:block; font-family:var(--display); font-size:21px; font-weight:800; text-transform:uppercase; letter-spacing:.02em; line-height:1.05}
+.trust small{color:#9C9C9C; font-size:13px}
+.sec-h{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin:56px 0 18px}
+.sec-h h2{font-family:var(--display); font-weight:900; font-style:italic; text-transform:uppercase; font-size:clamp(36px,6vw,58px); line-height:.9; margin:0}
+.sec-h a{font-weight:700; font-size:14px; white-space:nowrap}
+.types{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(190px,1fr); gap:10px; overflow-x:auto; scrollbar-width:none; padding-bottom:4px}
+.types::-webkit-scrollbar{display:none}
+.type{position:relative; border:none; padding:0; aspect-ratio:3/4; background:var(--soft); overflow:hidden; text-align:left}
+.type img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .3s}
+.type:hover img{transform:scale(1.05)}
+.type::after{content:""; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,0) 55%)}
+.type span{position:absolute; left:14px; right:14px; bottom:12px; z-index:1; color:#fff; font-family:var(--display); font-weight:800; font-size:26px; text-transform:uppercase; line-height:1}
+.type small{display:block; font-family:var(--body); font-size:12px; font-weight:600; color:#ddd; text-transform:none; margin-top:4px}
+.type.acc{background:var(--accent)}
+.type.acc::after{display:none}
+.type.acc span{color:var(--black); font-size:32px}
+.type.acc small{color:var(--black)}
+.visitband{background:var(--soft); margin-top:64px}
+.visitband .wrap{display:grid; grid-template-columns:1fr 1fr; align-items:stretch}
+.visitband .txt{padding:44px 24px 44px 0}
+.visitband h2{font-family:var(--display); font-weight:900; font-style:italic; text-transform:uppercase; font-size:clamp(44px,6vw,68px); line-height:.9; margin:0 0 12px}
+.visitband p{color:var(--muted); margin:0 0 22px; max-width:420px}
+.map{width:100%; height:100%; min-height:300px; border:0; background:var(--soft2); display:block}
 
 /* listing */
-.toolbar{display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:16px 0 10px}
-.chipsrow{display:flex; gap:8px; overflow-x:auto; padding:2px 0 10px; scrollbar-width:none}
-.chipsrow::-webkit-scrollbar{display:none}
-.chip{flex:none; border:1px solid var(--line-strong); background:var(--surface); border-radius:999px; padding:8px 14px; font-weight:700; font-size:14px; white-space:nowrap}
-.chip.on{background:var(--ink); border-color:var(--ink); color:#fff}
-.chip small{opacity:.6; font-weight:600}
-.search{flex:1; min-width:180px; position:relative}
-.search input{width:100%; border:1px solid var(--line-strong); border-radius:12px; padding:11px 12px 11px 38px; background:var(--surface)}
-.search svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--faint)}
-select.ctl{border:1px solid var(--line-strong); border-radius:12px; padding:11px 12px; background:var(--surface); font-weight:600; font-size:14px}
-.mine{display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:14px; color:var(--muted); margin-top:4px}
-.mine b{color:var(--ink)}
-.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px}
-.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; cursor:pointer; text-align:left; padding:0; display:flex; flex-direction:column; transition:transform .15s, box-shadow .15s}
-.card:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
-.ph{aspect-ratio:1/1; background:#F3F0EA; position:relative; overflow:hidden}
-.ph img{width:100%; height:100%; object-fit:cover}
-.tag{position:absolute; left:8px; top:8px; font-size:11px; font-weight:800; padding:4px 8px; border-radius:8px; background:rgba(255,255,255,.94); color:var(--urgent); letter-spacing:.01em; box-shadow:0 1px 3px rgba(0,0,0,.1)}
-.tag.sale{background:var(--sale)}
-.cb{padding:12px 14px 14px; display:flex; flex-direction:column; gap:3px}
-.brand{font-size:11px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:var(--accent)}
-.nm{font-weight:700; font-size:15px; line-height:1.3}
-.price{font-weight:800; font-size:18px; margin-top:4px}
-.price s{color:var(--faint); font-weight:600; font-size:13px; margin-left:6px}
-.fits{font-size:12px; color:var(--muted); margin-top:2px}
-.fits b{color:var(--ok)}
-.state{text-align:center; color:var(--muted); padding:40px 16px}
-.spinner{width:28px; height:28px; border:3px solid var(--line); border-top-color:var(--accent); border-radius:50%; animation:spin 1s linear infinite; margin:0 auto 12px}
+.shop-top{background:var(--black); color:#fff; padding:28px 0 22px}
+.shop-top h1{font-family:var(--display); font-weight:900; font-style:italic; text-transform:uppercase; font-size:clamp(48px,8vw,88px); line-height:.88; margin:0}
+.shop-top h1 em{color:var(--accent); font-style:italic}
+.mine{color:#A8A8A8; font-size:14px; margin-top:8px}
+.mine b{color:#fff}
+.filters{border-bottom:1px solid var(--line); background:var(--white)}
+.frow{display:flex; gap:8px; align-items:center; overflow-x:auto; scrollbar-width:none; padding:10px 0}
+.frow::-webkit-scrollbar{display:none}
+.frow + .frow{border-top:1px solid var(--line)}
+.frow label{flex:none; font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); width:42px}
+.chip{flex:none; border:1.5px solid var(--soft2); background:var(--white); border-radius:999px; padding:7px 14px; font-weight:700; font-size:13px; white-space:nowrap}
+.chip:hover{border-color:var(--black)}
+.chip.on{background:var(--black); border-color:var(--black); color:#fff}
+.chip small{opacity:.55; font-weight:600; margin-left:2px}
+.chip.add{border-style:dashed; border-color:var(--accent); color:var(--accent-deep)}
+.toolbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:18px 0 18px}
+.search{flex:1; min-width:200px; position:relative}
+.search input{width:100%; border:none; background:var(--soft); border-radius:999px; padding:13px 16px 13px 44px}
+.search input:focus{outline:2px solid var(--black)}
+.search svg{position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--muted)}
+select.ctl{border:none; background:var(--soft); border-radius:999px; padding:13px 16px; font-weight:600; font-size:14px}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:28px 16px}
+.card{background:none; border:none; cursor:pointer; text-align:left; padding:0; display:flex; flex-direction:column}
+.ph{aspect-ratio:1/1; background:var(--soft); position:relative; overflow:hidden}
+.ph img{width:100%; height:100%; object-fit:cover; transition:transform .35s}
+.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute; left:0; top:12px; font-family:var(--display); font-size:15px; font-weight:800; padding:4px 10px; background:var(--accent); color:var(--black); text-transform:uppercase; letter-spacing:.04em}
+.cb{padding:12px 2px 0; display:flex; flex-direction:column; gap:2px}
+.brand{font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.nm{font-weight:600; font-size:15px; line-height:1.3}
+.price{font-weight:800; font-size:17px; margin-top:4px}
+.fits{font-size:12.5px; color:var(--muted); margin-top:2px}
+.fits b{color:var(--ink); font-weight:700}
+.fits b::before{content:"● "; color:var(--accent)}
+.state{text-align:center; color:var(--muted); padding:56px 16px}
+.state b{display:block; color:var(--ink); font-family:var(--display); font-size:32px; text-transform:uppercase; margin-bottom:6px}
+.spinner{width:30px; height:30px; border:3px solid var(--soft2); border-top-color:var(--accent); border-radius:50%; animation:spin 1s linear infinite; margin:0 auto 14px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* product */
-.pd{display:grid; grid-template-columns:1.1fr 1fr; gap:28px; padding:20px 0 40px}
-.gal{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; border-radius:var(--radius); background:#F3F0EA; scrollbar-width:none}
+.pd{display:grid; grid-template-columns:1.25fr 1fr; gap:40px; padding:18px 0 48px}
+.gal{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; background:var(--soft); scrollbar-width:none}
 .gal::-webkit-scrollbar{display:none}
 .gal img{flex:none; width:100%; aspect-ratio:1/1; object-fit:cover; scroll-snap-align:start}
-.dots{display:flex; justify-content:center; gap:6px; margin-top:10px}
-.dots i{width:7px; height:7px; border-radius:50%; background:var(--line-strong)}
-.dots i.on{background:var(--accent)}
-.pd h1{font-size:clamp(22px,4vw,30px); letter-spacing:-.02em; margin:4px 0 6px; line-height:1.15}
-.pd .price{font-size:28px}
-.pd .meta{color:var(--muted); font-size:14px; margin-bottom:16px}
-.pd .sizes{margin:8px 0 6px}
-.yours{font-size:9px; display:block; color:var(--ok); font-weight:800}
-.sz.on .yours{color:#dff}
-.left{font-size:13px; font-weight:700; color:var(--urgent); min-height:20px; margin:6px 0 12px}
-.perks{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:10px}
-.perks li{display:flex; gap:10px; font-size:14px; color:var(--muted)}
-.perks b{color:var(--ink)}
-.back{margin:16px 0 0}
+.thumbs{display:flex; gap:8px; margin-top:8px}
+.thumbs button{border:2px solid transparent; padding:0; width:72px; height:72px; background:var(--soft)}
+.thumbs button.on{border-color:var(--black)}
+.thumbs img{width:100%; height:100%; object-fit:cover}
+.dots{display:none; justify-content:center; gap:6px; margin-top:10px}
+.dots i{width:22px; height:3px; background:var(--soft2)}
+.dots i.on{background:var(--black)}
+.pd h1{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(38px,4.6vw,56px); line-height:.92; margin:6px 0 10px}
+.pd .price{font-size:30px}
+.pd .meta{color:var(--muted); font-size:14px; margin:6px 0 4px}
+.pd .sizes .sz{min-width:70px; height:58px}
+.yours{font-family:var(--body); font-size:9px; display:block; color:var(--accent-deep); font-weight:800; letter-spacing:.04em}
+.sz.on .yours{color:var(--accent)}
+.left{font-size:14px; font-weight:700; color:var(--accent-deep); min-height:22px; margin:10px 0 14px}
+.perks{list-style:none; padding:0; margin:24px 0 0; border-top:1px solid var(--line)}
+.perks li{display:flex; gap:14px; font-size:14px; color:var(--muted); padding:14px 0; border-bottom:1px solid var(--line)}
+.perks svg{color:var(--black)}
+.perks b{color:var(--ink); display:block}
+.back{margin:18px 0 0}
+.buybar{display:none}
 
 /* bag + checkout */
-.page{max-width:720px; margin:0 auto; padding:20px 0 60px}
-.page h1{font-size:28px; letter-spacing:-.02em; margin:8px 0 16px}
-.line{display:grid; grid-template-columns:76px 1fr auto; gap:12px; align-items:center; padding:12px 0; border-bottom:1px solid var(--line)}
-.line img{width:76px; height:76px; border-radius:12px; object-fit:cover; background:#F3F0EA}
-.line .nm{font-size:14px}
+.page{max-width:760px; margin:0 auto; padding:26px 0 64px}
+.page h1{font-family:var(--display); font-weight:900; font-style:italic; text-transform:uppercase; font-size:clamp(50px,8vw,76px); line-height:.9; margin:6px 0 20px}
+.line{display:grid; grid-template-columns:96px 1fr auto; gap:16px; align-items:center; padding:16px 0; border-bottom:1px solid var(--line)}
+.line img{width:96px; height:96px; object-fit:cover; background:var(--soft)}
+.line .nm{font-size:15px}
 .line small{color:var(--muted); font-size:13px}
-.qty{display:inline-flex; align-items:center; border:1px solid var(--line-strong); border-radius:10px; overflow:hidden; margin-top:6px}
-.qty button{border:none; background:var(--surface); width:32px; height:30px; font-size:16px; font-weight:800}
-.qty span{min-width:26px; text-align:center; font-weight:700; font-size:14px}
-.totals{margin-top:16px; display:grid; gap:8px; font-size:15px}
-.totals div{display:flex; justify-content:space-between}
-.totals .grand{font-size:19px; font-weight:800; border-top:1px solid var(--line); padding-top:10px}
+.qty{display:inline-flex; align-items:center; border:1.5px solid var(--soft2); border-radius:999px; overflow:hidden; margin-top:8px}
+.qty button{border:none; background:var(--white); width:34px; height:32px; font-size:17px; font-weight:800}
+.qty span{min-width:24px; text-align:center; font-weight:700; font-size:14px}
+.totals{margin-top:18px; display:grid; gap:10px; font-size:15px}
+.totals div{display:flex; justify-content:space-between; gap:12px}
+.totals .grand{font-family:var(--display); font-size:28px; font-weight:800; text-transform:uppercase; border-top:2px solid var(--black); padding-top:12px}
 .free{color:var(--ok); font-weight:700}
-.field{margin-bottom:14px}
-.field label{display:block; font-size:13px; font-weight:700; margin-bottom:6px}
-.field input,.field textarea{width:100%; border:1px solid var(--line-strong); border-radius:12px; padding:12px; background:var(--surface)}
-.field input:focus,.field textarea:focus{outline:2px solid var(--accent-soft); border-color:var(--accent)}
-.err{color:var(--urgent); font-size:13px; margin-top:4px}
-.note{background:var(--accent-soft); border-radius:12px; padding:12px 14px; font-size:14px; margin:14px 0}
-.done{text-align:center; padding:40px 0}
-.done .big{font-size:56px}
-.visit{display:grid; grid-template-columns:1fr 1.3fr; gap:16px; align-items:stretch; margin-top:16px}
-.visit .panel p{margin:0 0 8px}
-.map{width:100%; min-height:260px; border:0; border-radius:var(--radius); background:#F3F0EA}
-@media (max-width:760px){ .visit{grid-template-columns:1fr} }
+.field{margin-bottom:16px}
+.field label{display:block; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:7px}
+.field input,.field textarea{width:100%; border:1.5px solid var(--soft2); padding:13px 14px; background:var(--white); border-radius:0}
+.field input:focus,.field textarea:focus{outline:none; border-color:var(--black)}
+.err{color:#C62828; font-size:13px; margin-top:5px; font-weight:600}
+.note{border-left:4px solid var(--accent); background:#FFF3EE; padding:14px 16px; font-size:14px; margin:0 0 22px}
+.done{text-align:center; padding:56px 0}
+.done .tick{width:76px; height:76px; border-radius:50%; background:var(--accent); display:grid; place-items:center; margin:0 auto 14px}
+.done .tick svg{width:40px; height:40px; color:var(--black)}
+.done p{color:var(--muted)}
 
 /* info */
-.info h2{font-size:20px; margin:24px 0 6px}
+.info h2{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:26px; margin:28px 0 6px}
 .info p,.info li{color:var(--muted); font-size:15px}
-footer{border-top:1px solid var(--line); margin-top:40px; padding:28px 0 90px; color:var(--muted); font-size:14px}
-footer .cols{display:flex; flex-wrap:wrap; gap:18px 30px}
-footer a{color:var(--muted); text-decoration:none; font-weight:600}
-.fab{position:fixed; right:16px; bottom:16px; z-index:50; background:#1FA855; color:#fff; border-radius:999px; padding:12px 16px; font-weight:800; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,.18); display:flex; gap:8px; align-items:center; font-size:14px}
-.toast{position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(120px); background:var(--ink); color:#fff; padding:12px 18px; border-radius:12px; font-weight:600; font-size:14px; transition:transform .25s; z-index:60}
-.toast.show{transform:translateX(-50%) translateY(0)}
+.info li{margin:6px 0}
+.visit{display:grid; grid-template-columns:1fr 1.3fr; margin-top:16px; border:1px solid var(--line)}
+.visit .vtxt{padding:22px}
+.visit .vtxt p{margin:0 0 10px; color:var(--ink)}
 
-@media (max-width:760px){
-  .who{grid-template-columns:repeat(3,1fr)}
-  .trust{grid-template-columns:repeat(2,1fr)}
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}
-  .pd{grid-template-columns:1fr; gap:14px; padding-top:8px}
-  .cb{padding:10px 11px 12px}
-  .nm{font-size:14px}
-  .logo small{display:none}
+footer{background:var(--black); color:#A8A8A8; margin-top:72px; padding:48px 0 100px; font-size:14px}
+footer .cols{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:28px}
+footer .flogo{font-family:var(--display); font-weight:900; font-style:italic; font-size:44px; color:#fff; line-height:1}
+footer .flogo b{color:var(--accent)}
+footer h4{font-family:var(--display); color:#fff; font-size:18px; text-transform:uppercase; letter-spacing:.06em; margin:4px 0 12px}
+footer a{color:#D6D6D6; text-decoration:none; display:block; margin:7px 0; font-weight:500}
+footer a:hover{color:var(--accent)}
+footer .fine{border-top:1px solid #222; margin-top:32px; padding-top:18px; font-size:12px; color:#777}
+.fab{position:fixed; right:16px; bottom:16px; z-index:50; background:var(--wa); color:#fff; border-radius:999px; padding:13px 18px; font-weight:700; text-decoration:none; box-shadow:0 10px 26px rgba(0,0,0,.25); display:flex; gap:8px; align-items:center; font-size:14px}
+.toast{position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(140px); background:var(--black); color:#fff; padding:13px 20px; font-weight:600; font-size:14px; transition:transform .25s,visibility .25s; z-index:60; border-left:4px solid var(--accent); white-space:nowrap; visibility:hidden}
+.toast.show{transform:translateX(-50%) translateY(0); visibility:visible}
+body.has-buybar .toast.show{transform:translateX(-50%) translateY(-70px)}
+
+@media (max-width:860px){
+  .nav{display:none}
+  .strip{font-size:13px; letter-spacing:.03em; padding:6px 8px}
+  .strip span{margin:0 5px}
   .iconbtn .lbl{display:none}
+  .logo{font-size:27px}
+  .hero{padding:30px 0 104px}
+  .hero p{font-size:15px}
+  .pick-wrap{margin-top:-76px}
+  .panel{padding:18px 16px}
+  .who{display:flex; overflow-x:auto; scrollbar-width:none; margin:0 -16px; padding:0 16px}
+  .who::-webkit-scrollbar{display:none}
+  .who button{flex:none; width:38vw; max-width:170px}
+  .who button span{font-size:24px}
+  .trust .wrap{grid-template-columns:repeat(2,1fr); padding:0}
+  .trust .cell{padding:18px 16px; border-left:none; border-top:1px solid #222}
+  .trust .cell:nth-child(even){border-left:1px solid #222}
+  .trust .cell:nth-child(-n+2){border-top:none}
+  .trust b{font-size:18px}
+  .trust svg{width:24px; height:24px}
+  .types{grid-auto-columns:42vw; margin:0 -16px; padding:0 16px 4px}
+  .sec-h{margin-top:44px}
+  .visitband .wrap{grid-template-columns:1fr; padding:0}
+  .visitband .txt{padding:32px 16px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 10px}
+  .tag{font-size:13px; padding:3px 8px; top:8px}
+  .nm{font-size:14px}
+  .price{font-size:16px}
   .search{flex-basis:100%}
   select.ctl{flex:1}
-  .fab{padding:0; width:54px; height:54px; justify-content:center}
+  .pd{grid-template-columns:1fr; gap:16px; padding-top:6px}
+  .pd .gal{margin:0 -16px}
+  .thumbs{display:none}
+  .dots{display:flex}
+  .buybar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:45; background:var(--white); border-top:1px solid var(--line); padding:10px 16px calc(10px + env(safe-area-inset-bottom)); gap:12px; align-items:center}
+  .buybar .bp{font-family:var(--display); font-weight:800; font-size:26px; line-height:1}
+  .buybar .bp small{display:block; font-family:var(--body); font-size:11px; font-weight:600; color:var(--muted)}
+  .buybar .btn{flex:1; padding:13px 16px}
+  body.has-buybar footer{padding-bottom:140px}
+  .visit{grid-template-columns:1fr}
+  .line{grid-template-columns:76px 1fr auto; gap:12px}
+  .line img{width:76px; height:76px}
+  footer .cols{grid-template-columns:1fr 1fr}
+  footer .cols > div:first-child{grid-column:1/-1}
+  .fab{padding:0; width:56px; height:56px; justify-content:center}
   .fab .lbl{display:none}
-  .fab svg{width:26px; height:26px}
+  .fab svg{width:28px; height:28px}
 }
 body.nofab .fab{display:none}
 </style>
 </head>
 <body>
-<div class="strip">Free delivery across Nashik <span>•</span> Easy size exchange <span>•</span> Real photos of our stock</div>
+<div class="strip">Free delivery in Nashik <span>/</span> Easy size exchange <span>/</span> Real photos</div>
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#/"><i>SR</i><div>SR Shoes<small>Nashik</small></div></a>
+    <a class="logo" href="#/">SR<b>.</b>SHOES</a>
+    <nav class="nav" id="nav"></nav>
     <div class="spacer"></div>
-    <a class="iconbtn" href="#/shop" aria-label="Shop"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span class="lbl">Shop</span></a>
-    <a class="iconbtn" href="#/bag" aria-label="Bag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span class="lbl">Bag</span><span class="count hidden" id="bagCount">0</span></a>
+    <a class="iconbtn" href="#/shop" aria-label="Search"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span class="lbl">Search</span></a>
+    <a class="iconbtn" href="#/bag" aria-label="Bag"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="lbl">Bag</span><span class="count hidden" id="bagCount">0</span></a>
   </div>
 </header>
 
-<main class="wrap" id="app"><div class="state"><div class="spinner"></div>Loading our shoes…</div></main>
+<main id="app"><div class="state"><div class="spinner"></div>Loading our shoes…</div></main>
 
 <footer>
   <div class="wrap">
     <div class="cols">
-      <div><b style="color:var(--ink)">SR Shoes, Nashik</b><br>Footwear for the whole family.</div>
-      <a href="#/info/delivery">Delivery &amp; payment</a>
-      <a href="#/info/exchange">Size exchange</a>
-      <a href="#/info/contact">Contact us</a>
-      <a href="#/info/privacy">Privacy</a>
-      <a href="#/info/contact" id="footVisit" class="hidden">📍 Visit the shop · Get directions</a>
+      <div><div class="flogo">SR<b>.</b>SHOES</div><p style="max-width:340px">Footwear for the whole family, from our shop in Nashik to your door. Every photo is our own stock.</p></div>
+      <div><h4>Help</h4>
+        <a href="#/info/delivery">Delivery &amp; payment</a>
+        <a href="#/info/exchange">Size exchange</a>
+        <a href="#/info/privacy">Privacy</a></div>
+      <div><h4>Shop</h4>
+        <a href="#/info/contact">Contact us</a>
+        <a id="footVisit" class="hidden" target="_blank" rel="noopener">Get directions</a>
+        <a id="footWa" target="_blank" rel="noopener">WhatsApp us</a></div>
     </div>
-    <p style="font-size:12px;margin-top:16px">Prices include all taxes. Stock is updated every day.</p>
+    <div class="fine">Prices include all taxes. Stock is updated every day.</div>
   </div>
 </footer>
-<a class="fab" id="fab" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.7-.2 1.3Z"/></svg><span class="lbl">Help on WhatsApp</span></a>
+<a class="fab" id="fab" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.7-.2 1.3Z"/></svg><span class="lbl">Help on WhatsApp</span></a>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -249,9 +357,20 @@ function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('show')
 const SHOP=STORE.shop||{};
 const hasPin=SHOP.lat!=null && SHOP.lng!=null;
 const directionsUrl=hasPin?`https://www.google.com/maps/dir/?api=1&destination=${SHOP.lat},${SHOP.lng}`:SHOP.mapsUrl||'';
+const mapEmbed=hasPin?`https://www.google.com/maps?q=${SHOP.lat},${SHOP.lng}&z=17&output=embed`:'';
 const waLink=text=>`https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(text)}`;
-if(SHOP.address||directionsUrl) $('#footVisit').classList.remove('hidden');
+const ICON={
+  truck:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
+  swap:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg>',
+  cam:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  chat:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+  pin:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  check:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg>',
+  arrow:'<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+};
 $('#fab').href=waLink(`Hi ${STORE.name}, I need help choosing shoes.`);
+$('#footWa').href=waLink(`Hi ${STORE.name}!`);
+if(directionsUrl){ $('#footVisit').href=directionsUrl; $('#footVisit').classList.remove('hidden'); }
 
 /* ---------- data ---------- */
 let ITEMS=[], BYID=new Map();
@@ -271,8 +390,8 @@ async function loadData(){
 }
 
 /* ---------- who / sizes ---------- */
-const WHO=[{k:'Men',ico:'👞',inc:['Men','Unisex']},{k:'Women',ico:'👡',inc:['Women','Unisex']},{k:'Boys',ico:'👟',inc:['Boys','Kids','Unisex']},
-           {k:'Girls',ico:'🥿',inc:['Girls','Kids','Unisex']},{k:'Kids',ico:'🧒',inc:['Kids','Boys','Girls','Unisex']}];
+const WHO=[{k:'Men',inc:['Men','Unisex']},{k:'Women',inc:['Women','Unisex']},{k:'Boys',inc:['Boys','Kids','Unisex']},
+           {k:'Girls',inc:['Girls','Kids','Unisex']},{k:'Kids',inc:['Kids','Boys','Girls','Unisex']}];
 const ACCESSORY=new Set(['Socks','Belts','Wallets','Insoles','Laces','Shoe Care','Door Mats','Other']);
 const isAcc=it=>ACCESSORY.has(it.c);
 // names often start with the brand ("Aerowalk chappal-AT67"); the brand is shown above, so drop it
@@ -299,11 +418,20 @@ const mySizesIn=it=>it.s.filter(s=>prefs.sizes.includes(s.l));
 function priceFor(it){ const m=mySizesIn(it), pool=(m.length?m:it.s).map(s=>s.p).filter(Boolean); return pool.length?Math.min(...pool):0; }
 function urgency(it){
   const m=mySizesIn(it);
-  if(m.length && m.every(s=>s.q===1)) return 'Last pair in your size';
+  if(m.length && m.every(s=>s.q===1)) return 'Last pair';
   if(it.s.length===1 && it.s[0].q===1) return 'Last pair';
-  if(it.s.length<=2 && !isAcc(it)) return 'Few sizes left';
+  if(it.s.length<=2 && !isAcc(it)) return 'Few left';
   return '';
 }
+const shoesFor=who=>ITEMS.filter(it=>!isAcc(it)&&forWho(it,who)&&fitsMe(it));
+// a photo that represents a group: its top-ranked item
+const coverOf=list=>{ const it=list.slice().sort((a,b)=>b.r-a.r)[0]; return it?it.img[0]:''; };
+function suggestions(){
+  const sizes=prefs.who?sizesFor(prefs.who):[];
+  return [...new Set(prefs.sizes.map(l=>twin(prefs.who,l)).filter(t=>t && !prefs.sizes.includes(t.label) && sizes.some(s=>s.l===t.label)).map(t=>JSON.stringify(t)))].map(j=>JSON.parse(j));
+}
+function setWho(w){ if(prefs.who!==w){ prefs.who=w; prefs.sizes=[]; savePrefs(); } }
+function toggleSize(l){ prefs.sizes=prefs.sizes.includes(l)?prefs.sizes.filter(x=>x!==l):[...prefs.sizes,l]; savePrefs(); }
 
 /* ---------- bag ---------- */
 let bag=store('srs_bag')||[];   // [{id, l, q}]
@@ -314,7 +442,7 @@ function addToBag(id,l){
   const it=BYID.get(id), s=sizeOf(it,l); if(!s) return;
   const e=bag.find(b=>b.id===id&&b.l===l);
   if(e){ if(e.q>=maxQty(s)){ toast('That is all we have in this size'); return; } e.q++; } else bag.push({id,l,q:1});
-  saveBag(); toast('Added to bag');
+  saveBag(); toast('Added to bag ✓');
 }
 function bagLines(){ return bag.map(b=>{ const it=BYID.get(b.id), s=sizeOf(it,b.l); return it&&s?{...b,it,s,price:s.p||0}:null; }).filter(Boolean); }
 function totals(){
@@ -325,13 +453,18 @@ function totals(){
 
 /* ---------- views ---------- */
 const app=$('#app');
+let shopState={type:'',sort:'rec',q:'',shown:24};
+function renderNav(onShop){
+  $('#nav').innerHTML=['Men','Women','Kids'].map(w=>`<button data-nav="${w}" class="${onShop&&prefs.who===w?'on':''}">${w}</button>`).join('')+`<button data-nav="" class="${onShop&&!prefs.who?'on':''}">All shoes</button>`;
+  $$('#nav [data-nav]').forEach(b=>b.onclick=()=>{ setWho(b.dataset.nav); shopState.type=''; shopState.shown=24; if(location.hash==='#/shop') route(); else location.hash='#/shop'; });
+}
 function card(it){
   const p=priceFor(it), u=urgency(it), m=mySizesIn(it);
   return `<button class="card" data-id="${esc(it.id)}">
     <div class="ph"><img src="${esc(it.img[0])}" loading="lazy" alt="${esc(fullName(it))}">${u?`<span class="tag">${esc(u)}</span>`:''}</div>
     <div class="cb">${it.b?`<div class="brand">${esc(it.b)}</div>`:''}<div class="nm">${esc(title(it))}</div>
       <div class="price">${p?rs(p):''}</div>
-      <div class="fits">${m.length?`<b>✓ In your size</b> ${esc(m.map(s=>s.l).join(', '))}`:isAcc(it)?'Free size':`Sizes ${esc(it.s.map(s=>s.l).slice(0,6).join(', '))}${it.s.length>6?'…':''}`}</div>
+      <div class="fits">${m.length?`<b>Your size</b> ${esc(m.map(s=>s.l).join(', '))}`:isAcc(it)?'Free size':`Sizes ${esc(it.s.map(s=>s.l).slice(0,6).join(', '))}${it.s.length>6?'…':''}`}</div>
     </div></button>`;
 }
 function bindCards(root){ $$((root||'')+' .card').forEach(c=>c.onclick=()=>{ location.hash='#/p/'+encodeURIComponent(c.dataset.id); }); }
@@ -340,129 +473,165 @@ function pickerHTML(){
   const sizes=prefs.who?sizesFor(prefs.who):[];
   const kids=sizes.filter(s=>/K$/i.test(s.l)), uk=sizes.filter(s=>!/K$/i.test(s.l) && +s.l<30), eu=sizes.filter(s=>+s.l>=30);
   const grp=(t,list)=>list.length?`<div class="sz-group">${t?`<h5>${t}</h5>`:''}<div class="sizes">${list.map(s=>`<button class="sz ${prefs.sizes.includes(s.l)?'on':''}" data-l="${esc(s.l)}">${esc(s.l)}<small>${s.n} styles</small></button>`).join('')}</div></div>`:'';
-  // suggest the matching UK/EU size for every size picked
-  const sugg=[...new Set(prefs.sizes.map(l=>twin(prefs.who,l)).filter(t=>t && !prefs.sizes.includes(t.label) && sizes.some(s=>s.l===t.label)).map(t=>JSON.stringify(t)))].map(j=>JSON.parse(j));
+  const sugg=suggestions(), n=prefs.who?shoesFor(prefs.who).length:0;
   return `<div class="panel" id="picker">
-    <div class="step-h">1 · Who are you shopping for?</div>
-    <div class="who">${WHO.map(w=>`<button class="${prefs.who===w.k?'on':''}" data-w="${w.k}"><span>${w.ico}</span>${w.k}</button>`).join('')}</div>
-    ${prefs.who?`<div class="step-h" style="margin-top:20px">2 · Pick your size — you can pick more than one</div>
+    <div class="step-h"><i>1</i>Who are you shopping for?</div>
+    <div class="who">${WHO.map(w=>{ const img=coverOf(ITEMS.filter(it=>!isAcc(it)&&it.g===w.k)); return `<button class="${prefs.who===w.k?'on':''}" data-w="${w.k}">${img?`<img src="${esc(img)}" alt="" loading="lazy">`:''}<span>${w.k}</span></button>`; }).join('')}</div>
+    ${prefs.who?`<div class="step-h" id="sizeStep" style="margin-top:26px"><i>2</i>Your size <small>— pick one or more</small></div>
       ${grp(kids.length&&(uk.length||eu.length)?'Kids sizes':'',kids)}${grp(eu.length?'UK sizes':'',uk)}${grp('European sizes',eu)}
       ${sugg.length?`<div class="hint">Many brands mark sizes differently. ${sugg.map(t=>`<button data-add="${esc(t.label)}">+ Also show ${t.sys} ${esc(t.label)}</button>`).join('')}</div>`:''}
-      <button class="btn primary block" id="go" style="margin-top:6px" ${prefs.sizes.length?'':'disabled'}>${prefs.sizes.length?`Show shoes in size ${esc(prefs.sizes.join(', '))}`:'Pick at least one size'}</button>
-      <button class="link" id="allSizes" style="margin-top:10px">Browse all sizes instead</button>`:''}
+      <button class="btn primary block" id="go" style="margin-top:6px" ${prefs.sizes.length?'':'disabled'}>${prefs.sizes.length?`Show ${n} styles in size ${esc(prefs.sizes.join(', '))} ${ICON.arrow}`:'Pick at least one size'}</button>
+      <div style="text-align:center;margin-top:12px"><button class="link" id="allSizes">Browse all sizes instead</button></div>`:''}
   </div>`;
 }
 function bindPicker(after){
-  $$('#picker [data-w]').forEach(b=>b.onclick=()=>{ if(prefs.who!==b.dataset.w){ prefs.who=b.dataset.w; prefs.sizes=[]; savePrefs(); } after(); });
-  $$('#picker [data-l]').forEach(b=>b.onclick=()=>{ const l=b.dataset.l; prefs.sizes=prefs.sizes.includes(l)?prefs.sizes.filter(x=>x!==l):[...prefs.sizes,l]; savePrefs(); after(); });
-  $$('#picker [data-add]').forEach(b=>b.onclick=()=>{ prefs.sizes=[...prefs.sizes,b.dataset.add]; savePrefs(); after(); });
-  if($('#go')) $('#go').onclick=()=>{ location.hash='#/shop'; };
+  $$('#picker [data-w]').forEach(b=>b.onclick=()=>{ setWho(b.dataset.w); after(); const s=$('#sizeStep'); if(s) s.scrollIntoView({behavior:'smooth',block:'start'}); });
+  $$('#picker [data-l]').forEach(b=>b.onclick=()=>{ const y=scrollY; toggleSize(b.dataset.l); after(); scrollTo(0,y); });
+  $$('#picker [data-add]').forEach(b=>b.onclick=()=>{ const y=scrollY; prefs.sizes=[...prefs.sizes,b.dataset.add]; savePrefs(); after(); scrollTo(0,y); });
+  if($('#go')) $('#go').onclick=()=>{ shopState.type=''; shopState.shown=24; location.hash='#/shop'; };
   if($('#allSizes')) $('#allSizes').onclick=()=>{ prefs.sizes=[]; savePrefs(); location.hash='#/shop'; };
 }
 
-function viewHome(){
-  const typeCount={}; ITEMS.forEach(it=>{ if(forWho(it,prefs.who) && fitsMe(it)) typeCount[it.c]=(typeCount[it.c]||0)+1; });
-  const types=Object.keys(typeCount).filter(t=>t&&!ACCESSORY.has(t)).sort((a,b)=>typeCount[b]-typeCount[a]);
-  const picks=ITEMS.filter(it=>forWho(it,prefs.who)&&fitsMe(it)&&!isAcc(it)).sort((a,b)=>b.r-a.r).slice(0,8);
-  app.innerHTML=`<section class="hero">
-      <h1>Shoes for the whole family,<br>delivered in ${STORE.city}.</h1>
-      <p>Tell us who you're shopping for and your size — we'll show only what we actually have in stock for you.</p>
-      ${pickerHTML()}
-    </section>
-    <div class="trust">
-      <div><b>🚚 Free delivery</b>Across ${STORE.city}, by Porter</div>
-      <div><b>🔁 Size exchange</b>Wrong size? We'll swap it</div>
-      <div><b>📸 Real photos</b>Every photo is our own stock</div>
-      <div><b>💬 Order on WhatsApp</b>A real person confirms your order</div>
-    </div>
-    ${types.length?`<h2 class="sec">Shop by type</h2><div class="types">${types.map(t=>`<button class="type" data-t="${esc(t)}">${esc(t)}<small>${typeCount[t]} styles</small></button>`).join('')}
-      <button class="type" data-t="__acc">Socks &amp; belts<small>Accessories</small></button></div>`:''}
-    ${picks.length?`<h2 class="sec">${prefs.sizes.length?'Picked for your size':'Don\'t miss these'}</h2><div class="grid" id="picks">${picks.map(card).join('')}</div>
-      <div style="text-align:center;margin-top:16px"><a class="btn" href="#/shop">See all ${prefs.sizes.length?'shoes in your size':'shoes'}</a></div>`:''}`;
-  bindPicker(viewHome); bindCards('#picks');
-  $$('.type').forEach(b=>b.onclick=()=>{ shopState.type=b.dataset.t; location.hash='#/shop'; });
+function visitBand(){
+  if(!directionsUrl && !SHOP.address) return '';
+  return `<section class="visitband"><div class="wrap">
+      <div class="txt"><h2>Come try<br>them on.</h2>
+        <p>${esc(SHOP.address||`Visit ${STORE.name} in ${STORE.city} and see the full range in person.`)}${SHOP.hours?`<br>${esc(SHOP.hours)}`:''}</p>
+        ${directionsUrl?`<a class="btn primary" href="${esc(directionsUrl)}" target="_blank" rel="noopener">${ICON.pin} Get directions</a>`:''}</div>
+      ${mapEmbed?`<iframe class="map" loading="lazy" title="Map to ${STORE.name}" referrerpolicy="no-referrer-when-downgrade" src="${mapEmbed}"></iframe>`:'<div></div>'}
+    </div></section>`;
 }
 
-let shopState={type:'',sort:'rec',q:'',shown:24};
+function viewHome(){
+  const pool=ITEMS.filter(it=>forWho(it,prefs.who)&&fitsMe(it)&&!isAcc(it));
+  const byType={}; pool.forEach(it=>{ if(it.c) (byType[it.c]=byType[it.c]||[]).push(it); });
+  const types=Object.keys(byType).sort((a,b)=>byType[b].length-byType[a].length);
+  const acc=ITEMS.filter(isAcc);
+  const picks=pool.slice().sort((a,b)=>b.r-a.r).slice(0,8);
+  app.innerHTML=`<section class="hero"><div class="ghost">SR</div><div class="wrap">
+      <h1>Find<br>your <em>fit.</em></h1>
+      <p>Tell us who's shopping and the size. We show only what's on our shelves in that size — delivered free across ${STORE.city}.</p>
+    </div></section>
+    <div class="wrap pick-wrap">${pickerHTML()}</div>
+    <section class="trust"><div class="wrap">
+      <div class="cell">${ICON.truck}<span><b>Free delivery</b><small>Across ${STORE.city} by Porter</small></span></div>
+      <div class="cell">${ICON.swap}<span><b>Size exchange</b><small>Wrong size? We swap it</small></span></div>
+      <div class="cell">${ICON.cam}<span><b>Real photos</b><small>Every photo is our stock</small></span></div>
+      <div class="cell">${ICON.chat}<span><b>WhatsApp order</b><small>A real person confirms</small></span></div>
+    </div></section>
+    <div class="wrap">
+    ${picks.length?`<div class="sec-h"><h2>${prefs.sizes.length?'In your size':'Grab them<br>before they go'}</h2><a href="#/shop">See all →</a></div>
+      <div class="grid" id="picks">${picks.map(card).join('')}</div>`:''}
+    ${types.length?`<div class="sec-h"><h2>Shop by type</h2></div><div class="types">${types.map(t=>`<button class="type" data-t="${esc(t)}"><img src="${esc(coverOf(byType[t]))}" alt="" loading="lazy"><span>${esc(t)}<small>${byType[t].length} styles</small></span></button>`).join('')}
+      ${acc.length?`<button class="type acc" data-t="__acc"><span>Socks, belts &amp; more<small>${acc.length} items</small></span></button>`:''}</div>`:''}
+    </div>
+    ${visitBand()}`;
+  bindPicker(viewHome); bindCards('#picks');
+  $$('.type').forEach(b=>b.onclick=()=>{ shopState.type=b.dataset.t; shopState.shown=24; location.hash='#/shop'; });
+}
+
 function viewShop(){
-  const base=ITEMS.filter(it=> shopState.type==='__acc' ? isAcc(it) : (!isAcc(it) && forWho(it,prefs.who) && fitsMe(it)));
+  const isAccView=shopState.type==='__acc';
+  const base=ITEMS.filter(it=> isAccView ? isAcc(it) : (!isAcc(it) && forWho(it,prefs.who) && fitsMe(it)));
   const tc={}; base.forEach(it=>{ tc[it.c||'Other']=(tc[it.c||'Other']||0)+1; });
-  let list=base.filter(it=>!shopState.type||shopState.type==='__acc'||it.c===shopState.type);
+  let list=base.filter(it=>!shopState.type||isAccView||it.c===shopState.type);
   const q=shopState.q.trim().toLowerCase();
   if(q.length>=2) list=list.filter(it=>(it.b+' '+it.n+' '+it.c+' '+it.col+' '+it.g).toLowerCase().includes(q));
   const by={ rec:(a,b)=>b.r-a.r||a.n.localeCompare(b.n), low:(a,b)=>priceFor(a)-priceFor(b), high:(a,b)=>priceFor(b)-priceFor(a) };
   list.sort(by[shopState.sort]);
-  const who=prefs.who||'Everyone';
-  app.innerHTML=`<div class="toolbar" style="margin-top:20px">
-      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+  const sizes=prefs.who?sizesFor(prefs.who):[], sugg=suggestions();
+  const heading=isAccView?'Socks, belts <em>&amp; more</em>':`${esc(prefs.who||'All')} <em>shoes</em>`;
+  app.innerHTML=`<section class="shop-top"><div class="wrap">
+      <h1>${heading}</h1>
+      <div class="mine"><b>${list.length}</b> ${isAccView?'items':`styles${prefs.sizes.length?` in size <b>${esc(prefs.sizes.join(', '))}</b>`:' · all sizes'}`}</div>
+    </div></section>
+    <div class="filters"><div class="wrap">
+      ${isAccView?`<div class="frow"><button class="chip" id="leaveAcc">← Back to shoes</button></div>`:`
+      <div class="frow"><label>For</label>${[{k:''},...WHO].map(w=>`<button class="chip ${prefs.who===w.k?'on':''}" data-w="${w.k}">${w.k||'Everyone'}</button>`).join('')}</div>
+      ${prefs.who?`<div class="frow"><label>Size</label>${sizes.map(s=>`<button class="chip ${prefs.sizes.includes(s.l)?'on':''}" data-l="${esc(s.l)}">${esc(s.l)}</button>`).join('')}${sugg.map(t=>`<button class="chip add" data-add="${esc(t.label)}">+ ${t.sys} ${esc(t.label)}</button>`).join('')}</div>`:''}
+      <div class="frow"><label>Type</label><button class="chip ${!shopState.type?'on':''}" data-t="">All <small>${base.length}</small></button>${Object.keys(tc).sort((a,b)=>tc[b]-tc[a]).map(t=>`<button class="chip ${shopState.type===t?'on':''}" data-t="${esc(t)}">${esc(t)} <small>${tc[t]}</small></button>`).join('')}</div>`}
+    </div></div>
+    <div class="wrap">
+    <div class="toolbar">
+      <div class="search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         <input id="q" placeholder="Search brand, style or colour" value="${esc(shopState.q)}"></div>
       <select class="ctl" id="sort"><option value="rec">Recommended</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
     </div>
-    ${shopState.type==='__acc'?'<div class="mine"><b>Socks, belts &amp; accessories</b> · <button class="link" id="leaveAcc">Back to shoes</button></div>':
-     `<div class="mine">Showing <b>${esc(who)}</b>${prefs.sizes.length?` in size <b>${esc(prefs.sizes.join(', '))}</b>`:', all sizes'} · <button class="link" id="change">Change</button></div>
-      <div class="chipsrow" style="margin-top:10px"><button class="chip ${!shopState.type?'on':''}" data-t="">All <small>${base.length}</small></button>${Object.keys(tc).sort((a,b)=>tc[b]-tc[a]).map(t=>`<button class="chip ${shopState.type===t?'on':''}" data-t="${esc(t)}">${esc(t)} <small>${tc[t]}</small></button>`).join('')}</div>`}
-    <div id="changeBox" class="hidden" style="margin:10px 0">${pickerHTML()}</div>
     <div class="grid" id="list">${list.slice(0,shopState.shown).map(card).join('')}</div>
-    ${list.length?'':`<div class="state"><b>Nothing here yet in your size.</b><br>Try another type, add a size, or <a href="${waLink('Hi, I am looking for shoes in size '+prefs.sizes.join(', '))}" target="_blank" rel="noopener">ask us on WhatsApp</a> — new stock arrives often.</div>`}
-    <div id="more" style="text-align:center;margin:18px 0">${list.length>shopState.shown?`<button class="btn" id="moreBtn">Show more (${list.length-shopState.shown})</button>`:''}</div>`;
+    ${list.length?'':`<div class="state"><b>Nothing here yet</b>Try another type or add a size — or <a href="${waLink('Hi, I am looking for shoes'+(prefs.sizes.length?' in size '+prefs.sizes.join(', '):''))}" target="_blank" rel="noopener">ask us on WhatsApp</a>. New stock arrives often.</div>`}
+    <div id="more" style="text-align:center;margin:28px 0">${list.length>shopState.shown?`<button class="btn" id="moreBtn">Show more (${list.length-shopState.shown})</button>`:''}</div>
+    </div>`;
+  renderNav(true);
   $('#sort').value=shopState.sort;
   $('#sort').onchange=e=>{ shopState.sort=e.target.value; shopState.shown=24; viewShop(); };
-  let t; $('#q').oninput=e=>{ clearTimeout(t); t=setTimeout(()=>{ shopState.q=e.target.value; shopState.shown=24; const pos=e.target.selectionStart; viewShop(); const i=$('#q'); i.focus(); i.setSelectionRange(pos,pos); },350); };
-  $$('.chip[data-t]').forEach(b=>b.onclick=()=>{ shopState.type=b.dataset.t; shopState.shown=24; viewShop(); });
-  if($('#change')) $('#change').onclick=()=>{ $('#changeBox').classList.toggle('hidden'); bindPicker(()=>{ viewShop(); $('#changeBox').classList.remove('hidden'); }); };
-  if($('#leaveAcc')) $('#leaveAcc').onclick=()=>{ shopState.type=''; viewShop(); };
-  if($('#moreBtn')) $('#moreBtn').onclick=()=>{ shopState.shown+=24; viewShop(); };
+  let t; $('#q').oninput=e=>{ clearTimeout(t); t=setTimeout(()=>{ shopState.q=e.target.value; shopState.shown=24; const pos=e.target.selectionStart, y=scrollY; viewShop(); scrollTo(0,y); const i=$('#q'); i.focus({preventScroll:true}); i.setSelectionRange(pos,pos); },350); };
+  const keep=fn=>()=>{ const y=scrollY; fn(); shopState.shown=24; viewShop(); scrollTo(0,y); };
+  $$('.filters [data-w]').forEach(b=>b.onclick=keep(()=>{ setWho(b.dataset.w); shopState.type=''; }));
+  $$('.filters [data-l]').forEach(b=>b.onclick=keep(()=>toggleSize(b.dataset.l)));
+  $$('.filters [data-add]').forEach(b=>b.onclick=keep(()=>{ prefs.sizes=[...prefs.sizes,b.dataset.add]; savePrefs(); }));
+  $$('.filters [data-t]').forEach(b=>b.onclick=keep(()=>{ shopState.type=b.dataset.t; }));
+  if($('#leaveAcc')) $('#leaveAcc').onclick=keep(()=>{ shopState.type=''; });
+  if($('#moreBtn')) $('#moreBtn').onclick=()=>{ const y=scrollY; shopState.shown+=24; viewShop(); scrollTo(0,y); };
   bindCards('#list');
   const more=$('#moreBtn'); if(more && 'IntersectionObserver' in window){ const o=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ o.disconnect(); more.click(); } },{rootMargin:'500px'}); o.observe(more); }
 }
 
 function viewProduct(id){
-  const it=BYID.get(id); if(!it){ app.innerHTML='<div class="state">This item has just sold out. <a href="#/shop">See other shoes</a></div>'; return; }
+  const it=BYID.get(id); if(!it){ app.innerHTML='<div class="wrap"><div class="state"><b>Just sold out</b><a href="#/shop">See other shoes</a></div></div>'; return; }
   const mine=mySizesIn(it); let pick=(mine.length===1?mine[0].l:'') || (it.s.length===1?it.s[0].l:'');
   const sizes=it.s.slice().sort((a,b)=>sizeSort(a.l,b.l));
+  let shown=0;
   const render=()=>{
     const s=sizeOf(it,pick), p=s?s.p:priceFor(it);
-    app.innerHTML=`<div class="back"><button class="link" onclick="history.length>1?history.back():location.hash='#/shop'">← Back</button></div>
+    app.innerHTML=`<div class="wrap"><div class="back"><button class="link" id="backBtn">← Back</button></div>
     <div class="pd">
       <div><div class="gal" id="gal">${it.img.map(u=>`<img src="${esc(u)}" alt="${esc(fullName(it))}">`).join('')}</div>
-        ${it.img.length>1?`<div class="dots">${it.img.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('')}</div>`:''}</div>
+        ${it.img.length>1?`<div class="thumbs">${it.img.map((u,i)=>`<button data-i="${i}" class="${i===shown?'on':''}"><img src="${esc(u)}" alt=""></button>`).join('')}</div>
+        <div class="dots">${it.img.map((_,i)=>`<i class="${i===shown?'on':''}"></i>`).join('')}</div>`:''}</div>
       <div>
         ${it.b?`<div class="brand">${esc(it.b)}</div>`:''}
         <h1>${esc(title(it))}</h1>
-        <div class="meta">${esc([it.c,it.g,it.col].filter(Boolean).join(' · '))}</div>
         <div class="price">${p?rs(p):''}</div>
-        <div class="step-h" style="margin-top:18px">${isAcc(it)&&sizes.length===1?'Size':'Choose your size'}</div>
+        <div class="meta">${esc([it.c,it.g,it.col].filter(Boolean).join(' · '))}</div>
+        <div class="step-h" style="margin-top:24px;font-size:20px">${isAcc(it)&&sizes.length===1?'Size':'Select size'}</div>
         <div class="sizes">${sizes.map(z=>`<button class="sz ${pick===z.l?'on':''}" data-l="${esc(z.l)}">${esc(z.l)}${prefs.sizes.includes(z.l)?'<span class="yours">YOUR SIZE</span>':''}</button>`).join('')}</div>
         <div class="left">${s&&s.q===1?'Only 1 pair left in this size':s&&s.q===2?'Only 2 pairs left in this size':''}</div>
-        <button class="btn primary block" id="add" ${pick?'':'disabled'}>${pick?'Add to bag':'Choose a size'}</button>
-        <a class="btn block" style="margin-top:10px" target="_blank" rel="noopener" href="${waLink(`Hi, I have a question about ${fullName(it)}${pick?' (size '+pick+')':''}.`)}">Ask about this on WhatsApp</a>
+        <button class="btn primary block" id="add" ${pick?'':'disabled'}>${pick?'Add to bag':'Select a size'}</button>
+        <a class="btn block" style="margin-top:10px" target="_blank" rel="noopener" href="${waLink(`Hi, I have a question about ${fullName(it)}${pick?' (size '+pick+')':''}.`)}">Ask on WhatsApp</a>
         <ul class="perks">
-          <li>🚚 <span><b>Free delivery across ${STORE.city}</b> by Porter, usually the same or next day.</span></li>
-          <li>💬 <span><b>Order on WhatsApp.</b> We confirm your pair is ready, then you pay by UPI.</span></li>
-          <li>🔁 <span><b>Size exchange</b> within ${STORE.exchangeDays} days. <a href="#/info/exchange">How it works</a></span></li>
+          <li>${ICON.truck}<span><b>Free delivery across ${STORE.city}</b>By Porter, usually the same or next day.</span></li>
+          <li>${ICON.chat}<span><b>Order on WhatsApp</b>We confirm your pair is ready, then you pay by UPI.</span></li>
+          <li>${ICON.swap}<span><b>Size exchange in ${STORE.exchangeDays} days</b><a href="#/info/exchange">How it works</a></span></li>
         </ul>
-      </div></div>`;
-    $$('.pd .sz').forEach(b=>b.onclick=()=>{ pick=b.dataset.l; render(); });
-    $('#add').onclick=()=>{ addToBag(it.id,pick); };
-    const g=$('#gal'); if(g && it.img.length>1) g.onscroll=()=>{ const i=Math.round(g.scrollLeft/g.clientWidth); $$('.dots i').forEach((d,k)=>d.classList.toggle('on',k===i)); };
+      </div></div></div>
+    <div class="buybar"><div class="bp">${p?rs(p):''}<small>${pick?'Size '+esc(pick):'Select a size'}</small></div><button class="btn primary" id="add2" ${pick?'':'disabled'}>${pick?'Add to bag':'Select size'}</button></div>`;
+    $('#backBtn').onclick=()=>{ if(history.length>1) history.back(); else location.hash='#/shop'; };
+    $$('.pd .sz').forEach(b=>b.onclick=()=>{ pick=b.dataset.l; const y=scrollY; render(); scrollTo(0,y); });
+    $('#add').onclick=$('#add2').onclick=()=>{ addToBag(it.id,pick); };
+    const g=$('#gal');
+    if(g && it.img.length>1){
+      g.onscroll=()=>{ const i=Math.round(g.scrollLeft/g.clientWidth); shown=i; $$('.dots i').forEach((d,k)=>d.classList.toggle('on',k===i)); $$('.thumbs button').forEach((d,k)=>d.classList.toggle('on',k===i)); };
+      $$('.thumbs button').forEach(b=>b.onclick=()=>{ g.scrollTo({left:g.clientWidth*+b.dataset.i,behavior:'smooth'}); });
+      if(shown) g.scrollLeft=g.clientWidth*shown;
+    }
   };
   render(); window.scrollTo(0,0);
 }
 
 function viewBag(){
   const {lines,sub,free}=totals();
-  if(!lines.length){ app.innerHTML=`<div class="page"><h1>Your bag</h1><div class="state">Your bag is empty.<br><br><a class="btn primary" href="#/shop">Start shopping</a></div></div>`; return; }
-  app.innerHTML=`<div class="page"><h1>Your bag</h1>
+  if(!lines.length){ app.innerHTML=`<div class="wrap"><div class="page"><h1>Your bag</h1><div class="state"><b>It's empty</b>Find something you like.<br><br><a class="btn primary" href="#/shop">Start shopping</a></div></div></div>`; return; }
+  app.innerHTML=`<div class="wrap"><div class="page"><h1>Your bag</h1>
     ${lines.map((l,i)=>`<div class="line"><img src="${esc(l.it.img[0])}" alt="">
-      <div><div class="nm">${esc(fullName(l.it))}</div><small>Size ${esc(l.l)}${l.s.q===1?' · last pair':''}</small><br>
+      <div><div class="brand">${esc(l.it.b)}</div><div class="nm">${esc(title(l.it))}</div><small>Size ${esc(l.l)}${l.s.q===1?' · last pair':''}</small><br>
         <div class="qty"><button data-dec="${i}" aria-label="Less">−</button><span>${l.q}</span><button data-inc="${i}" aria-label="More">+</button></div></div>
-      <div style="text-align:right"><b>${rs(l.price*l.q)}</b><br><button class="link" data-rm="${i}" style="font-size:13px;color:var(--muted)">Remove</button></div></div>`).join('')}
+      <div style="text-align:right"><b>${rs(l.price*l.q)}</b><br><button class="link" data-rm="${i}" style="font-size:13px;color:var(--muted);margin-top:8px">Remove</button></div></div>`).join('')}
     <div class="totals"><div><span>Subtotal</span><b>${rs(sub)}</b></div>
       <div><span>Delivery in ${STORE.city}</span>${free?'<span class="free">Free</span>':'<span>Porter fare, confirmed on WhatsApp</span>'}</div>
       <div class="grand"><span>Total</span><span>${rs(sub)}${free?'':' + delivery'}</span></div></div>
-    ${!free?`<div class="note">Add ${rs(STORE.freeDeliveryAbove-sub)} more for free delivery.</div>`:''}
-    <a class="btn primary block" href="#/checkout" style="margin-top:18px">Checkout</a>
-    <a class="btn block" href="#/shop" style="margin-top:10px">Continue shopping</a></div>`;
+    ${!free?`<div class="note" style="margin-top:16px">Add ${rs(STORE.freeDeliveryAbove-sub)} more for free delivery.</div>`:''}
+    <a class="btn primary block" href="#/checkout" style="margin-top:22px">Checkout ${ICON.arrow}</a>
+    <a class="btn block" href="#/shop" style="margin-top:10px">Continue shopping</a></div></div>`;
   const ls=bagLines();
   $$('[data-inc]').forEach(b=>b.onclick=()=>{ const l=ls[+b.dataset.inc], e=bag.find(x=>x.id===l.id&&x.l===l.l); if(e.q>=maxQty(l.s)){ toast('That is all we have in this size'); return; } e.q++; saveBag(); viewBag(); });
   $$('[data-dec]').forEach(b=>b.onclick=()=>{ const l=ls[+b.dataset.dec], e=bag.find(x=>x.id===l.id&&x.l===l.l); e.q--; if(e.q<1) bag=bag.filter(x=>x!==e); saveBag(); viewBag(); });
@@ -473,8 +642,8 @@ function viewCheckout(){
   const {lines,sub,free}=totals();
   if(!lines.length){ location.hash='#/bag'; return; }
   const c=store('srs_customer')||{};
-  app.innerHTML=`<div class="page"><h1>Checkout</h1>
-    <div class="note">You'll send this order to us on WhatsApp. We confirm your pairs are ready and share a UPI payment request. Then we deliver.</div>
+  app.innerHTML=`<div class="wrap"><div class="page"><h1>Checkout</h1>
+    <div class="note">You send this order to us on WhatsApp. We confirm your pairs are ready and share a UPI payment request. Then we deliver.</div>
     <form id="co" novalidate>
       <div class="field"><label for="cn">Your name</label><input id="cn" autocomplete="name" value="${esc(c.name||'')}" required><div class="err" id="e_cn"></div></div>
       <div class="field"><label for="cp">Mobile number</label><input id="cp" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10-digit mobile" value="${esc(c.phone||'')}"><div class="err" id="e_cp"></div></div>
@@ -484,15 +653,15 @@ function viewCheckout(){
       <div class="totals">${lines.map(l=>`<div><span>${esc(fullName(l.it))} · size ${esc(l.l)}${l.q>1?' × '+l.q:''}</span><span>${rs(l.price*l.q)}</span></div>`).join('')}
         <div><span>Delivery</span>${free?'<span class="free">Free</span>':'<span>Porter fare</span>'}</div>
         <div class="grand"><span>Total</span><span>${rs(sub)}${free?'':' + delivery'}</span></div></div>
-      <button class="btn wa block" type="submit" style="margin-top:18px">Send order on WhatsApp</button>
-    </form></div>`;
+      <button class="btn wa block" type="submit" style="margin-top:22px">Send order on WhatsApp</button>
+    </form></div></div>`;
   $('#co').onsubmit=e=>{
     e.preventDefault();
     const v={ name:$('#cn').value.trim(), phone:$('#cp').value.replace(/\D/g,'').slice(-10), addr:$('#ca').value.trim(), land:$('#cl').value.trim(), pin:$('#cz').value.trim() };
     const err={ cn:v.name?'':'Please enter your name', cp:/^[6-9]\d{9}$/.test(v.phone)?'':'Enter a valid 10-digit mobile number',
       ca:v.addr.length>=10?'':'Please enter your full address', cz:!/^\d{6}$/.test(v.pin)?'Enter your 6-digit pincode':STORE.pincodePattern.test(v.pin)?'':`Sorry, we deliver only within ${STORE.city} city for now.` };
     Object.entries(err).forEach(([k,m])=>$('#e_'+k).textContent=m);
-    if(Object.values(err).some(Boolean)) return;
+    const bad=Object.keys(err).find(k=>err[k]); if(bad){ $('#'+bad).focus(); return; }
     save('srs_customer',v);
     const ref='SR'+new Date().toISOString().slice(2,10).replace(/-/g,'')+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
     const msg=[`*New order ${ref}* — ${STORE.name} online`, '',
@@ -503,41 +672,43 @@ function viewCheckout(){
     save('srs_last_order',{ref, t:Date.now(), msg});
     window.open(waLink(msg),'_blank','noopener');
     bag=[]; saveBag();
-    app.innerHTML=`<div class="page done"><div class="big">✅</div><h1>Order sent on WhatsApp</h1>
-      <p>Your order <b>${esc(ref)}</b> is in our WhatsApp. If WhatsApp didn't open, <a href="${waLink(msg)}" target="_blank" rel="noopener">tap here to send it</a>.</p>
-      <p style="color:var(--muted)">We'll confirm your pairs and send the UPI payment request shortly. Delivery across ${STORE.city} by Porter.</p>
-      <a class="btn" href="#/">Back to shop</a></div>`;
+    app.innerHTML=`<div class="wrap"><div class="page done"><div class="tick">${ICON.check}</div><h1>Order sent</h1>
+      <p>Your order <b style="color:var(--ink)">${esc(ref)}</b> is in our WhatsApp. If WhatsApp didn't open, <a href="${waLink(msg)}" target="_blank" rel="noopener">tap here to send it</a>.</p>
+      <p>We'll confirm your pairs and send the UPI payment request shortly. Delivery across ${STORE.city} by Porter.</p>
+      <a class="btn primary" href="#/" style="margin-top:12px">Back to shop</a></div></div>`;
+    window.scrollTo(0,0);
   };
 }
 
 const INFO={
-  delivery:`<h1>Delivery &amp; payment</h1>
+  delivery:()=>`<h1>Delivery &amp; payment</h1>
     <h2>Where we deliver</h2><p>Anywhere within ${STORE.city} city, by Porter. Orders confirmed during shop hours usually arrive the same or the next day.</p>
     <h2>Delivery charges</h2><p>${STORE.freeDeliveryAbove?`Free on orders of ${rs(STORE.freeDeliveryAbove)} and above. For smaller orders we share the Porter fare on WhatsApp before you pay.`:'Delivery is free on every order.'}</p>
     <h2>How you pay</h2><p>When you place an order, it comes to us on WhatsApp. We check that your pairs are ready, then send you a UPI payment request. Once paid, we dispatch.</p>`,
-  exchange:`<h1>Size exchange</h1>
+  exchange:()=>`<h1>Size exchange</h1>
     <p>If the size isn't right, we'll exchange it.</p>
     <ul><li>Message us on WhatsApp within ${STORE.exchangeDays} days of delivery.</li>
       <li>The shoes must be unworn, with the original box and tags.</li>
       <li>You send the pair back to us by Porter (you pay that Porter fare).</li>
       <li>We deliver your new size free of charge.</li>
       <li>Exchanges depend on the size being in stock; we'll confirm on WhatsApp first.</li></ul>`,
-  contact:`<h1>Contact us</h1><p>The quickest way to reach us is WhatsApp — a real person from our shop will reply.</p>
+  contact:()=>`<h1>Contact us</h1><p>The quickest way to reach us is WhatsApp — a real person from our shop will reply.</p>
     <p><a class="btn wa" href="${waLink('Hi '+STORE.name+'!')}" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
-    <h2>Visit the shop</h2><p>You can also walk in and try the full range.</p>
-    ${SHOP.address||directionsUrl?`<div class="visit"><div class="panel">
+    <h2>Visit the shop</h2><p>Walk in and try the full range.</p>
+    ${SHOP.address||directionsUrl?`<div class="visit"><div class="vtxt">
         <p><b>${STORE.name}</b><br>${esc(SHOP.address||STORE.city)}</p>
-        ${SHOP.landmark?`<p>${esc(SHOP.landmark)}</p>`:''}${SHOP.hours?`<p>🕘 ${esc(SHOP.hours)}</p>`:''}
-        ${directionsUrl?`<a class="btn primary" href="${esc(directionsUrl)}" target="_blank" rel="noopener">📍 Get directions</a>`:''}
-        ${SHOP.mapsUrl?`<p style="margin-top:12px"><a href="${esc(SHOP.mapsUrl)}" target="_blank" rel="noopener">Open in Google Maps</a></p>`:''}
-      </div>${hasPin?`<iframe class="map" loading="lazy" title="Map to ${STORE.name}" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${SHOP.lat},${SHOP.lng}&z=17&output=embed"></iframe>`:''}</div>`:`<p>${STORE.name}, ${STORE.city}.</p>`}`,
-  privacy:`<h1>Privacy</h1><p>We use your name, mobile number and address only to confirm and deliver your order. We don't share them with anyone except the delivery partner who brings your order. Your bag and details are saved only on your own phone to make the next order quicker.</p>`
+        ${SHOP.landmark?`<p>${esc(SHOP.landmark)}</p>`:''}${SHOP.hours?`<p>${esc(SHOP.hours)}</p>`:''}
+        ${directionsUrl?`<a class="btn primary" href="${esc(directionsUrl)}" target="_blank" rel="noopener">${ICON.pin} Get directions</a>`:''}
+        ${SHOP.mapsUrl?`<p style="margin-top:14px"><a class="link" href="${esc(SHOP.mapsUrl)}" target="_blank" rel="noopener">Open in Google Maps</a></p>`:''}
+      </div>${mapEmbed?`<iframe class="map" loading="lazy" title="Map to ${STORE.name}" referrerpolicy="no-referrer-when-downgrade" src="${mapEmbed}"></iframe>`:''}</div>`:`<p>${STORE.name}, ${STORE.city}.</p>`}`,
+  privacy:()=>`<h1>Privacy</h1><p>We use your name, mobile number and address only to confirm and deliver your order. We don't share them with anyone except the delivery partner who brings your order. Your bag and details are saved only on your own phone to make the next order quicker.</p>`
 };
-function viewInfo(k){ app.innerHTML=`<div class="page info">${INFO[k]||INFO.contact}</div>`; window.scrollTo(0,0); }
+function viewInfo(k){ app.innerHTML=`<div class="wrap"><div class="page info">${(INFO[k]||INFO.contact)()}</div></div>`; window.scrollTo(0,0); }
 
 /* ---------- router ---------- */
 function route(){
   const h=location.hash.replace(/^#\/?/,''), [a,b]=h.split('/');
+  if(a!=='shop') renderNav(false);
   if(a==='p') viewProduct(decodeURIComponent(b||''));
   else if(a==='shop'){ viewShop(); }
   else if(a==='bag') viewBag();
@@ -545,6 +716,7 @@ function route(){
   else if(a==='info') viewInfo(b);
   else viewHome();
   document.body.classList.toggle('nofab',['p','bag','checkout'].includes(a));
+  document.body.classList.toggle('has-buybar',a==='p');
   if(a!=='p') window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);
@@ -559,7 +731,7 @@ window.addEventListener('hashchange',route);
     route();
   }catch(e){
     console.error(e);
-    app.innerHTML=`<div class="state"><b>We couldn't load the shop just now.</b><br>Please refresh in a moment, or <a href="${waLink('Hi, I want to shop online')}" target="_blank" rel="noopener">message us on WhatsApp</a>.</div>`;
+    app.innerHTML=`<div class="wrap"><div class="state"><b>Shop is restocking</b>Please refresh in a moment, or <a href="${waLink('Hi, I want to shop online')}" target="_blank" rel="noopener">message us on WhatsApp</a>.</div></div>`;
   }
 })();
 </script>
